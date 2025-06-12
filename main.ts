@@ -80,16 +80,16 @@ basic.forever(function () {
             microbit_Choice2_type = "Papel"
         }
         if (SerialData == "Tijeras" && microbit_Choice2_type != "Tijeras") {
-            music.ringTone(880)
+            music.play(music.tonePlayable(880, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
             puntuación += 1
         } else if (SerialData == "Papel" && microbit_Choice2_type != "Papel") {
-            music.ringTone(880)
+            music.play(music.tonePlayable(880, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
             puntuación += 1
         } else if (SerialData == "Piedra" && microbit_Choice2_type != "Piedra") {
-            music.ringTone(880)
+            music.play(music.tonePlayable(880, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
             puntuación += 1
         } else {
-            music.ringTone(147)
+            music.play(music.tonePlayable(147, music.beat(BeatFraction.Whole)), music.PlaybackMode.UntilDone)
             puntuación += -1
         }
     }
